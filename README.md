@@ -6,19 +6,24 @@ This repository contains code for paper "[Improving Generalizability of Graph An
 ## 2. Usage
 ### Requirements:
 + pytorch==1.7.0
++ dgl==0.7.2
 + scikit-learn
 + scipy
 + pandas
++ networkx
 
 ### Datasets:
-Users can create datasets with our code.
-Please store the labeled anomalies in a csv file with unified file name, e.g., 'dblp_subG1_labeled_20anomaly.csv';
-Build a new folder './sub_G_datasets/' outside the './AugAN/' folder, put the datasets and the csv file into it.
+Users can create datasets with the code.
++ python create_datasets.py
+
+Please check the data statistics and control the overlapped nodes in each sub-graph.
+The processed datasets are put into the ./sub_G_datasets/ folder.
 
 ### Data Format:
-The input data is a '.mat' file with 'gnd' (ground-truth), 'Attributes' (attributes), and 'Network' (graph structure).
+The input data for AugAN is a '.mat' file with 'gnd' (ground-truth), 'Attributes' (attributes), and 'Network' (graph structure).
 
-### Usage:
+### Example:
++ cd ./src/
 + python main.py --epoch=2001 --dataset=AD_ms_academic_cs_sub --meta_lr=1e-05 --update_lr=1e-05 --known_outliers_num=20 --batch_size=128 --alpha=0.1 --remain_prop=0.5 --seed=1
 + python main.py --epoch=2001 --dataset=AD_dblp_sub --meta_lr=1e-05 --update_lr=1e-05 --known_outliers_num=20 --batch_size=128 --alpha=0.3 --remain_prop=0.8 --seed=1
 
@@ -33,4 +38,3 @@ Please kindly cite the paper if you use the code or any resources in this repo:
   publisher={IEEE}
 }
 ```
-
