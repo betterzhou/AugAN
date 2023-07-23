@@ -15,9 +15,9 @@ import os
 def main(args):
     set_seed(args.seed)
     device = torch.device('cuda:1')
-    if args.dataset in ['AD_ms_academic_cs_sub', 'AD_Amazon_clothing_sub', 'AD_dblp_sub']:
+    if args.dataset in ['CS_sub', 'Amazon_clothing_sub', 'DBLP_sub']:
         args.totalTask_num = 4 - 1
-    elif args.dataset in ['AD_amazon_electronics_photo_sub', 'AD_ACM_Small_SideInfo_szhou_sub']:
+    elif args.dataset in ['Photo_sub', 'ACM_sub']:
         args.totalTask_num = 3 - 1  # leave test
 
     SubGraph_info = {}
