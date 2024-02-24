@@ -7,8 +7,11 @@ This repository contains code for paper "[Improving Generalizability of Graph An
 
 We created graph datasets with distribution shifts by using the above graph split code. 
 The partitioned subgraphs (e.g., AD_dblp_sub0, AD_dblp_sub1, AD_dblp_sub2, AD_dblp_sub3) own similar characteristics yet present different distributions. 
+
 Although our paper is about graph anomaly detection (i.e., detecting rare categories on graph), the released datasets can be used for node classification tasks.
+
 We believe the released datasets are also helpful for [graph out-of-distribution generalization task](https://arxiv.org/abs/2202.07987) (i.e., domain generalization on graphs) and [graph domain adaptation task](https://arxiv.org/pdf/2402.11153.pdf).
+
 Please refer to [our paper](https://arxiv.org/abs/2306.10534v1) for the details of building graph datasets with distribution shifts.
 
 ## 2. Usage
