@@ -38,6 +38,10 @@ The input data for AugAN is a '.mat' file with 'gnd' (ground-truth), 'Attributes
 + python main.py --epoch=2001 --dataset=AD_ms_academic_cs_sub --meta_lr=1e-05 --update_lr=1e-05 --known_outliers_num=20 --batch_size=128 --alpha=0.1 --remain_prop=0.5 --seed=1
 + python main.py --epoch=2001 --dataset=AD_dblp_sub --meta_lr=1e-05 --update_lr=1e-05 --known_outliers_num=20 --batch_size=128 --alpha=0.3 --remain_prop=0.8 --seed=1
 
+
+For research cooperation, please contact shuang.zhou@connect.polyu.hk
+
+
 ## 3. Citation
 Please kindly cite the paper if you use the code or any resources in this repo:
 ```bib
